@@ -6,7 +6,7 @@ This api is used to help in development of an app that saves articles read from 
 
 Through out this documentation,
 
-- -- the terms &quot;any one &quot; refers to any person who has not logged  to the application and &quot;Client&quot; refers to a person who has not logged in to the application
+- -- the terms "any one " refers to any person who has not logged  to the application and "Client" refers to a person who has not logged in to the application
 - --Articles news articles  written in various websites
 - --Categories are the classifications of these articles
 
@@ -48,29 +48,29 @@ Example Response:
 
     {
 
-        &quot;id&quot;: 1,
+        "id": 1,
 
-        &quot;title&quot;: &quot;Category 1&quot;,
+        "title": "Category 1",
 
-        &quot;views&quot;: 1,
+        "views": 1,
 
-        &quot;created\_at&quot;: &quot;2018-10-26 08:03:31&quot;,
+        "created\_at": "2018-10-26 08:03:31",
 
-        &quot;updated\_at&quot;: &quot;2018-10-26 08:03:31&quot;
+        "updated\_at": "2018-10-26 08:03:31"
 
     },
 
     {
 
-        &quot;id&quot;: 2,
+        "id": 2,
 
-        &quot;title&quot;: &quot;Category 2&quot;,
+        "title": "Category 2",
 
-        &quot;views&quot;: 5,
+        "views": 5,
 
-        &quot;created\_at&quot;: &quot;2018-10-26 08:04:33&quot;,
+        "created\_at": "2018-10-26 08:04:33",
 
-        &quot;updated\_at&quot;: &quot;2018-10-26 08:04:33&quot;
+        "updated\_at": "2018-10-26 08:04:33"
 
     }
 
@@ -110,15 +110,15 @@ Example Response:
 
 {
 
-    &quot;id&quot;: 1,
+    "id": 1,
 
-    &quot;title&quot;: &quot;Category 1&quot;,
+    "title": "Category 1",
 
-    &quot;views&quot;: 3,
+    "views": 3,
 
-    &quot;created\_at&quot;: &quot;2018-10-26 08:03:31&quot;,
+    "created\_at": "2018-10-26 08:03:31",
 
-    &quot;updated\_at&quot;: &quot;2018-10-26 10:42:49&quot;
+    "updated\_at": "2018-10-26 10:42:49"
 
 }
 
@@ -154,29 +154,29 @@ Example Response:
 
     {
 
-        &quot;id&quot;: 1,
+        "id": 1,
 
-        &quot;title&quot;: &quot;Category 1&quot;,
+        "title": "Category 1",
 
-        &quot;views&quot;: 1,
+        "views": 1,
 
-        &quot;created\_at&quot;: &quot;2018-10-26 08:03:31&quot;,
+        "created\_at": "2018-10-26 08:03:31",
 
-        &quot;updated\_at&quot;: &quot;2018-10-26 08:03:31&quot;
+        "updated\_at": "2018-10-26 08:03:31"
 
     },
 
     {
 
-        &quot;id&quot;: 2,
+        "id": 2,
 
-        &quot;title&quot;: &quot;Category 2&quot;,
+        "title": "Category 2",
 
-        &quot;views&quot;: 5,
+        "views": 5,
 
-        &quot;created\_at&quot;: &quot;2018-10-26 08:04:33&quot;,
+        "created\_at": "2018-10-26 08:04:33",
 
-        &quot;updated\_at&quot;: &quot;2018-10-26 08:04:33&quot;
+        "updated\_at": "2018-10-26 08:04:33"
 
     }
 
@@ -226,53 +226,53 @@ Example response:
 
     {
 
-        &quot;id&quot;: 4,
+        "id": 4,
 
-        &quot;title&quot;: &quot;Article 1&quot;,
+        "title": "Article 1",
 
-        &quot;image&quot;: &quot;www.myurl.com/images/image.jpg&quot;,
+        "image": "www.myurl.com/images/image.jpg",
 
-        &quot;author&quot;: &quot;Ann Doe&quot;,
+        "author": "Ann Doe",
 
-        &quot;website\_name&quot;: &quot;Another Webistes&quot;,
+        "website\_name": "Another Webistes",
 
-        &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
+        "webUrl": "www.myurl.com",
 
-        &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
+        "brief\_description": "this is my brief description",
 
-        &quot;category\_id&quot;: 2,
+        "category\_id": 2,
 
-        &quot;views&quot;: 0,
+        "views": 0,
 
-        &quot;created\_at&quot;: &quot;2018-10-26 09:37:23&quot;,
+        "created\_at": "2018-10-26 09:37:23",
 
-        &quot;updated\_at&quot;: &quot;2018-10-26 09:37:23&quot;
+        "updated\_at": "2018-10-26 09:37:23"
 
     },
 
     {
 
-        &quot;id&quot;: 5,
+        "id": 5,
 
-        &quot;title&quot;: &quot;Another Article&quot;,
+        "title": "Another Article",
 
-        &quot;image&quot;: null,
+        "image": null,
 
-        &quot;author&quot;: &quot;Ann Doe&quot;,
+        "author": "Ann Doe",
 
-        &quot;website\_name&quot;: &quot;Another Webistes&quot;,
+        "website\_name": "Another Webistes",
 
-        &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
+        "webUrl": "www.myurl.com",
 
-        &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
+        "brief\_description": "this is my brief description",
 
-        &quot;category\_id&quot;: 2,
+        "category\_id": 2,
 
-        &quot;views&quot;: 0,
+        "views": 0,
 
-        &quot;created\_at&quot;: &quot;2018-10-26 12:07:39&quot;,
+        "created\_at": "2018-10-26 12:07:39",
 
-        &quot;updated\_at&quot;: &quot;2018-10-26 12:07:39&quot;
+        "updated\_at": "2018-10-26 12:07:39"
 
     }
 
@@ -290,7 +290,7 @@ Http Header parameters:
 
 Content-type: multipart/form-data
 
-Authorization: Bearer \&lt;AccessToken\&gt;
+Authorization: Bearer <AccessToken>
 
 Parameter:
 
@@ -302,7 +302,7 @@ Success:
 
 | Field | Type | Description |
 | --- | --- | --- |
-| status | String | The status of the operation. Possible outcome: &quot;success&quot; or &quot;error&quot; |
+| status | String | The status of the operation. Possible outcome: "success" or "error" |
 | status\_code | Integer | The code of the status of the operation |
 | message | String | The message response regarding the operation |
 | data | JSON array | The output data. Shows the properties of the new created category |
@@ -321,21 +321,21 @@ Example response:
 
 {
 
-    &quot;status&quot;: &quot;success&quot;,
+    "status": "success",
 
-    &quot;status\_code&quot;: 201,
+    "status\_code": 201,
 
-    &quot;message&quot;: &quot;Category Created&quot;,
+    "message": "Category Created",
 
-    &quot;data&quot;: {
+    "data": {
 
-        &quot;title&quot;: &quot;Another Article&quot;,
+        "title": "Another Article",
 
-        &quot;updated\_at&quot;: &quot;2018-10-26 12:34:04&quot;,
+        "updated\_at": "2018-10-26 12:34:04",
 
-        &quot;created\_at&quot;: &quot;2018-10-26 12:34:04&quot;,
+        "created\_at": "2018-10-26 12:34:04",
 
-        &quot;id&quot;: 3
+        "id": 3
 
     }
 
@@ -353,7 +353,7 @@ Http Header parameters:
 
 Content-type: multipart/form-data
 
-Authorization: Bearer \&lt;AccessToken\&gt;
+Authorization: Bearer <AccessToken>
 
 Parameter:
 
@@ -367,7 +367,7 @@ Success:
 
 | Field | Type | Description |
 | --- | --- | --- |
-| status | String | The status of the operation. Possible outcome: &quot;success&quot; or &quot;error&quot; |
+| status | String | The status of the operation. Possible outcome: "success" or "error" |
 | status\_code | Integer | The code of the status of the action |
 | message | String | The message response regarding the action |
 | data | JSON array | The output data. Shows the properties of the updated category |
@@ -384,23 +384,23 @@ Example response:
 
 {
 
-    &quot;status&quot;: &quot;success&quot;,
+    "status": "success",
 
-    &quot;status\_code&quot;: 201,
+    "status\_code": 201,
 
-    &quot;message&quot;: &quot;Saved successfully&quot;,
+    "message": "Saved successfully",
 
-    &quot;data&quot;: {
+    "data": {
 
-        &quot;id&quot;: 3,
+        "id": 3,
 
-        &quot;title&quot;: &quot;Updated  Category&quot;,
+        "title": "Updated  Category",
 
-        &quot;views&quot;: 0,
+        "views": 0,
 
-        &quot;created\_at&quot;: &quot;2018-10-26 12:34:04&quot;,
+        "created\_at": "2018-10-26 12:34:04",
 
-        &quot;updated\_at&quot;: &quot;2018-10-26 12:57:42&quot;
+        "updated\_at": "2018-10-26 12:57:42"
 
     }
 
@@ -418,7 +418,7 @@ Http Header parameters:
 
 Content-type: multipart/form-data
 
-Authorization: Bearer \&lt;AccessToken\&gt;
+Authorization: Bearer <AccessToken>
 
 Parameter:
 
@@ -430,7 +430,7 @@ Response:
 
 | Field | Type | Description |
 | --- | --- | --- |
-| status | String | The status outcome of the action. Possible outputs &quot;success&quot; or &quot;error&quot; |
+| status | String | The status outcome of the action. Possible outputs "success" or "error" |
 | Data | JSON array | null |
 
 Example usage:
@@ -441,13 +441,13 @@ Example response:
 
 {
 
-    &quot;status&quot;: &quot;success&quot;,
+    "status": "success",
 
-    &quot;status\_code&quot;: 200,
+    "status\_code": 200,
 
-    &quot;message&quot;: &quot;Deleted&quot;,
+    "message": "Deleted",
 
-    &quot;data&quot;: null
+    "data": null
 
 }
 
@@ -489,53 +489,53 @@ Example response:
 
     {
 
-        &quot;id&quot;: 4,
+        "id": 4,
 
-        &quot;title&quot;: &quot;Another Article&quot;,
+        "title": "Another Article",
 
-        &quot;image&quot;: null,
+        "image": null,
 
-        &quot;author&quot;: &quot;Ann Doe&quot;,
+        "author": "Ann Doe",
 
-        &quot;website\_name&quot;: &quot;Another Webistes&quot;,
+        "website\_name": "Another Webistes",
 
-        &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
+        "webUrl": "www.myurl.com",
 
-        &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
+        "brief\_description": "this is my brief description",
 
-        &quot;category\_id&quot;: 2,
+        "category\_id": 2,
 
-        &quot;views&quot;: 0,
+        "views": 0,
 
-        &quot;created\_at&quot;: &quot;2018-10-26 09:37:23&quot;,
+        "created\_at": "2018-10-26 09:37:23",
 
-        &quot;updated\_at&quot;: &quot;2018-10-26 09:37:23&quot;
+        "updated\_at": "2018-10-26 09:37:23"
 
     },
 
     {
 
-        &quot;id&quot;: 5,
+        "id": 5,
 
-        &quot;title&quot;: &quot;Another Article&quot;,
+        "title": "Another Article",
 
-        &quot;image&quot;: null,
+        "image": null,
 
-        &quot;author&quot;: &quot;Ann Doe&quot;,
+        "author": "Ann Doe",
 
-        &quot;website\_name&quot;: &quot;Another Webistes&quot;,
+        "website\_name": "Another Webistes",
 
-        &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
+        "webUrl": "www.myurl.com",
 
-        &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
+        "brief\_description": "this is my brief description",
 
-        &quot;category\_id&quot;: 2,
+        "category\_id": 2,
 
-        &quot;views&quot;: 0,
+        "views": 0,
 
-        &quot;created\_at&quot;: &quot;2018-10-26 12:07:39&quot;,
+        "created\_at": "2018-10-26 12:07:39",
 
-        &quot;updated\_at&quot;: &quot;2018-10-26 12:07:39&quot;
+        "updated\_at": "2018-10-26 12:07:39"
 
     }
 
@@ -579,53 +579,53 @@ Example response:
 
     {
 
-        &quot;id&quot;: 4,
+        "id": 4,
 
-        &quot;title&quot;: &quot;Another Article&quot;,
+        "title": "Another Article",
 
-        &quot;image&quot;: null,
+        "image": null,
 
-        &quot;author&quot;: &quot;Ann Doe&quot;,
+        "author": "Ann Doe",
 
-        &quot;website\_name&quot;: &quot;Another Webistes&quot;,
+        "website\_name": "Another Webistes",
 
-        &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
+        "webUrl": "www.myurl.com",
 
-        &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
+        "brief\_description": "this is my brief description",
 
-        &quot;category\_id&quot;: 2,
+        "category\_id": 2,
 
-        &quot;views&quot;: 0,
+        "views": 0,
 
-        &quot;created\_at&quot;: &quot;2018-10-26 09:37:23&quot;,
+        "created\_at": "2018-10-26 09:37:23",
 
-        &quot;updated\_at&quot;: &quot;2018-10-26 09:37:23&quot;
+        "updated\_at": "2018-10-26 09:37:23"
 
     },
 
     {
 
-        &quot;id&quot;: 5,
+        "id": 5,
 
-        &quot;title&quot;: &quot;Another Article&quot;,
+        "title": "Another Article",
 
-        &quot;image&quot;: null,
+        "image": null,
 
-        &quot;author&quot;: &quot;Ann Doe&quot;,
+        "author": "Ann Doe",
 
-        &quot;website\_name&quot;: &quot;Another Webistes&quot;,
+        "website\_name": "Another Webistes",
 
-        &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
+        "webUrl": "www.myurl.com",
 
-        &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
+        "brief\_description": "this is my brief description",
 
-        &quot;category\_id&quot;: 2,
+        "category\_id": 2,
 
-        &quot;views&quot;: 0,
+        "views": 0,
 
-        &quot;created\_at&quot;: &quot;2018-10-26 12:07:39&quot;,
+        "created\_at": "2018-10-26 12:07:39",
 
-        &quot;updated\_at&quot;: &quot;2018-10-26 12:07:39&quot;
+        "updated\_at": "2018-10-26 12:07:39"
 
     }
 
@@ -680,83 +680,83 @@ Example outcome:
 
 {
 
-    &quot;current\_page&quot;: 1,
+    "current\_page": 1,
 
-    &quot;data&quot;: [
+    "data": [
 
         {
 
-            &quot;id&quot;: 4,
+            "id": 4,
 
-            &quot;title&quot;: &quot;Another Article&quot;,
+            "title": "Another Article",
 
-            &quot;image&quot;: null,
+            "image": null,
 
-            &quot;author&quot;: &quot;Ann Doe&quot;,
+            "author": "Ann Doe",
 
-            &quot;website\_name&quot;: &quot;Another Webistes&quot;,
+            "website\_name": "Another Webistes",
 
-            &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
+            "webUrl": "www.myurl.com",
 
-            &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
+            "brief\_description": "this is my brief description",
 
-            &quot;category\_id&quot;: 2,
+            "category\_id": 2,
 
-            &quot;views&quot;: 0,
+            "views": 0,
 
-            &quot;created\_at&quot;: &quot;2018-10-26 09:37:23&quot;,
+            "created\_at": "2018-10-26 09:37:23",
 
-            &quot;updated\_at&quot;: &quot;2018-10-26 09:37:23&quot;
+            "updated\_at": "2018-10-26 09:37:23"
 
         },
 
         {
 
-            &quot;id&quot;: 5,
+            "id": 5,
 
-            &quot;title&quot;: &quot;Another Article&quot;,
+            "title": "Another Article",
 
-            &quot;image&quot;: null,
+            "image": null,
 
-            &quot;author&quot;: &quot;Ann Doe&quot;,
+            "author": "Ann Doe",
 
-            &quot;website\_name&quot;: &quot;Another Webistes&quot;,
+            "website\_name": "Another Webistes",
 
-            &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
+            "webUrl": "www.myurl.com",
 
-            &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
+            "brief\_description": "this is my brief description",
 
-            &quot;category\_id&quot;: 2,
+            "category\_id": 2,
 
-            &quot;views&quot;: 0,
+            "views": 0,
 
-            &quot;created\_at&quot;: &quot;2018-10-26 12:07:39&quot;,
+            "created\_at": "2018-10-26 12:07:39",
 
-            &quot;updated\_at&quot;: &quot;2018-10-26 12:07:39&quot;
+            "updated\_at": "2018-10-26 12:07:39"
 
         }
 
     ],
 
-    &quot;first\_page\_url&quot;: &quot;http://127.0.0.1:8000/api/articles/paginate?page=1&quot;,
+    "first\_page\_url": "http://127.0.0.1:8000/api/articles/paginate?page=1",
 
-    &quot;from&quot;: 1,
+    "from": 1,
 
-    &quot;last\_page&quot;: 1,
+    "last\_page": 1,
 
-    &quot;last\_page\_url&quot;: &quot;http://127.0.0.1:8000/api/articles/paginate?page=1&quot;,
+    "last\_page\_url": "http://127.0.0.1:8000/api/articles/paginate?page=1",
 
-    &quot;next\_page\_url&quot;: null,
+    "next\_page\_url": null,
 
-    &quot;path&quot;: &quot;http://127.0.0.1:8000/api/articles/paginate&quot;,
+    "path": "http://127.0.0.1:8000/api/articles/paginate",
 
-    &quot;per\_page&quot;: 10,
+    "per\_page": 10,
 
-    &quot;prev\_page\_url&quot;: null,
+    "prev\_page\_url": null,
 
-    &quot;to&quot;: 2,
+    "to": 2,
 
-    &quot;total&quot;: 2
+    "total": 2
 
 }
 
@@ -800,27 +800,27 @@ Example response:
 
 {
 
-    &quot;id&quot;: 4,
+    "id": 4,
 
-    &quot;title&quot;: &quot;Another Article&quot;,
+    "title": "Another Article",
 
-    &quot;image&quot;: null,
+    "image": null,
 
-    &quot;author&quot;: &quot;Ann Doe&quot;,
+    "author": "Ann Doe",
 
-    &quot;website\_name&quot;: &quot;Another Webistes&quot;,
+    "website\_name": "Another Webistes",
 
-    &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
+    "webUrl": "www.myurl.com",
 
-    &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
+    "brief\_description": "this is my brief description",
 
-    &quot;category\_id&quot;: 2,
+    "category\_id": 2,
 
-    &quot;views&quot;: 1,
+    "views": 1,
 
-    &quot;created\_at&quot;: &quot;2018-10-26 09:37:23&quot;,
+    "created\_at": "2018-10-26 09:37:23",
 
-    &quot;updated\_at&quot;: &quot;2018-10-26 14:25:50&quot;
+    "updated\_at": "2018-10-26 14:25:50"
 
 }
 
@@ -844,7 +844,7 @@ Success response:
 
 | Field | Type | Description |
 | --- | --- | --- |
-| status | String | The status of the action, Possible response, &quot;success&quot; or &quot;rror&quot; |
+| status | String | The status of the action, Possible response, "success" or "rror" |
 | status\_code | Integer | The status code of the response |
 | message | String | The response message |
 | data | Integer | The number of views found |
@@ -857,13 +857,13 @@ Example response:
 
 {
 
-    &quot;status&quot;: &quot;success&quot;,
+    "status": "success",
 
-    &quot;status\_code&quot;: 200,
+    "status\_code": 200,
 
-    &quot;message&quot;: &quot;Views found&quot;,
+    "message": "Views found",
 
-    &quot;data&quot;: 1
+    "data": 1
 
 }
 
@@ -879,7 +879,7 @@ Http Header parameters:
 
 Content-type: multipart/form-data
 
-Authorization: Bearer \&lt;AccessToken\&gt;
+Authorization: Bearer <AccessToken>
 
 Parameter
 
@@ -922,31 +922,31 @@ Example response:
 
 {
 
-    &quot;status&quot;: &quot;success&quot;,
+    "status": "success",
 
-    &quot;status\_code&quot;: 201,
+    "status\_code": 201,
 
-    &quot;message&quot;: &quot;Article Created&quot;,
+    "message": "Article Created",
 
-    &quot;data&quot;: {
+    "data": {
 
-        &quot;title&quot;: &quot;The latest article&quot;,
+        "title": "The latest article",
 
-        &quot;website\_name&quot;: &quot;East african post&quot;,
+        "website\_name": "East african post",
 
-        &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
+        "webUrl": "www.myurl.com",
 
-        &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
+        "brief\_description": "this is my brief description",
 
-        &quot;category\_id&quot;: &quot;2&quot;,
+        "category\_id": "2",
 
-        &quot;author&quot;: &quot;Sammy Doe&quot;,
+        "author": "Sammy Doe",
 
-        &quot;updated\_at&quot;: &quot;2018-10-26 14:54:45&quot;,
+        "updated\_at": "2018-10-26 14:54:45",
 
-        &quot;created\_at&quot;: &quot;2018-10-26 14:54:45&quot;,
+        "created\_at": "2018-10-26 14:54:45",
 
-        &quot;id&quot;: 8
+        "id": 8
 
     }
 
@@ -964,7 +964,7 @@ Http Header parameters:
 
 Content-type: multipart/form-data
 
-Authorization: Bearer \&lt;AccessToken\&gt;
+Authorization: Bearer <AccessToken>
 
 Parameter
 
@@ -1008,35 +1008,35 @@ Example response:
 
 {
 
-    &quot;status&quot;: &quot;success&quot;,
+    "status": "success",
 
-    &quot;status\_code&quot;: 201,
+    "status\_code": 201,
 
-    &quot;message&quot;: &quot;Saved successfully&quot;,
+    "message": "Saved successfully",
 
-    &quot;data&quot;: {
+    "data": {
 
-        &quot;id&quot;: 4,
+        "id": 4,
 
-        &quot;title&quot;: &quot;The updated article&quot;,
+        "title": "The updated article",
 
-        &quot;image&quot;: null,
+        "image": null,
 
-        &quot;author&quot;: &quot;Sammy Doe&quot;,
+        "author": "Sammy Doe",
 
-        &quot;website\_name&quot;: &quot;East african post&quot;,
+        "website\_name": "East african post",
 
-        &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
+        "webUrl": "www.myurl.com",
 
-        &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
+        "brief\_description": "this is my brief description",
 
-        &quot;category\_id&quot;: &quot;2&quot;,
+        "category\_id": "2",
 
-        &quot;views&quot;: 1,
+        "views": 1,
 
-        &quot;created\_at&quot;: &quot;2018-10-26 09:37:23&quot;,
+        "created\_at": "2018-10-26 09:37:23",
 
-        &quot;updated\_at&quot;: &quot;2018-10-26 15:11:53&quot;
+        "updated\_at": "2018-10-26 15:11:53"
 
     }
 
@@ -1054,7 +1054,7 @@ Http Header parameters:
 
 Content-type: multipart/form-data
 
-Authorization: Bearer \&lt;AccessToken\&gt;
+Authorization: Bearer <AccessToken>
 
 Parameter:
 
@@ -1079,13 +1079,13 @@ Example response:
 
 {
 
-    &quot;status&quot;: &quot;success&quot;,
+    "status": "success",
 
-    &quot;status\_code&quot;: 200,
+    "status\_code": 200,
 
-    &quot;message&quot;: &quot;Deleted&quot;,
+    "message": "Deleted",
 
-    &quot;data&quot;: null
+    "data": null
 
 }
 
@@ -1124,15 +1124,15 @@ Example response:
 
 {
 
-    &quot;status&quot;: &quot;success&quot;,
+    "status": "success",
 
-    &quot;status\_code&quot;: 201,
+    "status\_code": 201,
 
-    &quot;message&quot;: &quot;success&quot;,
+    "message": "success",
 
-    &quot;data&quot;: {
+    "data": {
 
-       &quot;token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MDU3MDg1OCwiZXhwIjoxNTQwNTc0NDU4LCJuYmYiOjE1NDA1NzA4NTgsImp0aSI6InA3Q2dVblhFUkh6VndRWEsiLCJzdWIiOjE0LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.XwsVdeIXIP186Cgt69Q\_4b-8sq4jxN\_P4jg9t2oeat8&quot;
+       "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MDU3MDg1OCwiZXhwIjoxNTQwNTc0NDU4LCJuYmYiOjE1NDA1NzA4NTgsImp0aSI6InA3Q2dVblhFUkh6VndRWEsiLCJzdWIiOjE0LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.XwsVdeIXIP186Cgt69Q\_4b-8sq4jxN\_P4jg9t2oeat8"
 
     }
 
