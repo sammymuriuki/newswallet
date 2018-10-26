@@ -1,58 +1,1144 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+**News Wallet Api Documentation**
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+**Introduction**
 
-## About Laravel
+This api is used to help in development of an app that saves articles read from various websites.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+Through out this documentation,
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- -- the terms "any one " refers to any person who has not logged  to the application and "Client" refers to a person who has not logged in to the application
+- --Articles news articles  written in various websites
+- --Categories are the classifications of these articles
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+The client can CREATE, UPDATE, and DELETE articles and categories.
 
-## Learning Laravel
+The client can categorize the articles
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+Any one can READ my categories and articles
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+1. **Read All Categories**
 
-## Laravel Sponsors
+Permission: Any one
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
+Method Type: GET
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Pulse Storm](http://www.pulsestorm.net/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
+Route :         /api/categories/all
 
-## Contributing
+Http Header parameters: None
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Parameter: none
 
-## Security Vulnerabilities
+Success:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+| Field | Type | Description |
+| --- | --- | --- |
+| Id    | Integer | The category id |
+| Title | String | The title of the category |
+| Views | Integer | The number of times the category has been read |
+| created__at | DateTime | The date and time when it was created |
+| updated__at | DateTime | The date and time when the category was updated |
 
-## License
+Example usage:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+127.0.0.1:8000/api/categories/all
+
+Example Response:
+
+[
+    {
+        "id": 1,
+        "title": "Category 1",
+        "views": 1,
+        "created_at": "2018-10-26 08:03:31",
+        "updated_at": "2018-10-26 08:03:31"
+    },
+    {
+        "id": 2,
+        "title": "Category 2",
+        "views": 5,
+        "created_at": "2018-10-26 08:04:33",
+        "updated_at": "2018-10-26 08:04:33"
+    }
+]
+
+
+1. **Read one category**
+
+Permission: Any one
+
+Method Type: GET
+
+Route : /api/categories/get/1/{id}
+
+Http Header parameters: None
+
+Parameter:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| Id | Integer | The id number of the category |
+
+Success:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| Id | Integer | The category id |
+| Title | String | The title of the category |
+| Views | Integer | The number of times the category has been read |
+| created_at | DateTime | The date and time when it was created |
+| updated_at | DateTime | The date and time when the category was updated |
+
+Example usage:
+
+127.0.0.1:8000/api/categories/get/1
+
+Example Response:
+
+{
+
+    "id": 1,
+
+    "title": "Category 1",
+
+    "views": 3,
+
+    "created_at": "2018-10-26 08:03:31",
+
+    "updated_at": "2018-10-26 10:42:49"
+
+}
+
+1. **Read popular categories**
+
+Permission: Any one
+
+Method Type: GET
+
+Route: /api/categories/popular
+
+Http Header parameters: None
+
+Parameter: none
+
+Success:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| Id | Integer | The category id |
+| Title | String | The title of the category |
+| Views | Integer | The number of times the category has been read |
+| created_at | DateTime | The date and time when it was created |
+| updated_at | DateTime | The date and time when the category was updated |
+
+Example usage:
+
+127.0.0.1:8000/api/categories/popular
+
+Example Response:
+
+[
+
+    {
+
+        "id": 1,
+
+        "title": "Category 1",
+
+        "views": 1,
+
+        "created_at": "2018-10-26 08:03:31",
+
+        "updated_at": "2018-10-26 08:03:31"
+
+    },
+
+    {
+
+        "id": 2,
+
+        "title": "Category 2",
+
+        "views": 5,
+
+        "created_at": "2018-10-26 08:04:33",
+
+        "updated_at": "2018-10-26 08:04:33"
+
+    }
+
+]
+
+1. **Get articles in a category**
+
+Permission: Any one
+
+Method Type: GET
+
+Route: /api/categories/{id}/articles/
+
+Http Header parameters: None
+
+Parameter:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| Id | Integer | The id of the category |
+
+
+
+Success:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| Id | Integer | The id of the article |
+| Title | String | The title of the article |
+| Author | String | The name of the author of the article |
+| website_name | String | The name of the website where the article was posted  |
+| webUrl | String | The url of the website where the article was posted |
+| brief_description | String | The excerpt of the article |
+| category_id | Integer | The id of the category of the article |
+| views | Integer | The number of times that the article is viewed |
+| created_at | DateTime | The date and time when it was created |
+| updated_at | DateTime | The date and time when the article was updated |
+|   |   |   |
+
+Example usage:
+
+127.0.0.1:8000/api/categories/popular
+
+Example response:
+
+[
+
+    {
+
+        "id": 4,
+
+        "title": "Article 1",
+
+        "image": "www.myurl.com/images/image.jpg",
+
+        "author": "Ann Doe",
+
+        "website_name": "Another Webistes",
+
+        "webUrl": "www.myurl.com",
+
+        "brief_description": "this is my brief description",
+
+        "category_id": 2,
+
+        "views": 0,
+
+        "created_at": "2018-10-26 09:37:23",
+
+        "updated_at": "2018-10-26 09:37:23"
+
+    },
+
+    {
+
+        "id": 5,
+
+        "title": "Another Article",
+
+        "image": null,
+
+        "author": "Ann Doe",
+
+        "website_name": "Another Webistes",
+
+        "webUrl": "www.myurl.com",
+
+        "brief_description": "this is my brief description",
+
+        "category_id": 2,
+
+        "views": 0,
+
+        "created_at": "2018-10-26 12:07:39",
+
+        "updated_at": "2018-10-26 12:07:39"
+
+    }
+
+]
+
+1. **Create a new category**
+
+Permission: Client
+
+Method Type: POST
+
+Route: /api/categories/create
+
+Http Header parameters:
+
+Content-type: multipart/form-data
+
+Authorization: Bearer <AccessToken>
+
+Parameter:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| title | String | The title of the category |
+
+Success:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| status | String | The status of the operation. Possible outcome: "success" or "error" |
+| status_code | Integer | The code of the status of the operation |
+| message | String | The message response regarding the operation |
+| data | JSON array | The output data. Shows the properties of the new created category |
+| title | String | The title of the new created category |
+| updated_at | Datetime | The timestamp of when the category was updated |
+| created_at | Datetime | The timestamp of when the category was updated |
+| id | Integer | The id of the new created category |
+
+
+
+Example usage:
+
+127.0.0.1:8000/api/categories/create/
+
+Example response:
+
+{
+
+    "status": "success",
+
+    "status_code": 201,
+
+    "message": "Category Created",
+
+    "data": {
+
+        "title": "Another Article",
+
+        "updated_at": "2018-10-26 12:34:04",
+
+        "created_at": "2018-10-26 12:34:04",
+
+        "id": 3
+
+    }
+
+}
+
+1. **Update category**
+
+Permission: Client
+
+Method Type: POST
+
+Route: /api/categories/update
+
+Http Header parameters:
+
+Content-type: multipart/form-data
+
+Authorization: Bearer <AccessToken>
+
+Parameter:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| title | String | The title of the category |
+| Id | Integer | The id of the category that you want to update |
+| title | String | The title of the category |
+
+Success:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| status | String | The status of the operation. Possible outcome: "success" or "error" |
+| status_code | Integer | The code of the status of the action |
+| message | String | The message response regarding the action |
+| data | JSON array | The output data. Shows the properties of the updated category |
+| title | String | The title of the updated category |
+| updated_at | Datetime | The timestamp of when the category was updated |
+| created_at | Datetime | The timestamp of when the category was updated |
+| id | Integer | The id of the updated category |
+
+Example usage:
+
+127.0.0.1:8000/api/categories/update/
+
+Example response:
+
+{
+
+    "status": "success",
+
+    "status_code": 201,
+
+    "message": "Saved successfully",
+
+    "data": {
+
+        "id": 3,
+
+        "title": "Updated  Category",
+
+        "views": 0,
+
+        "created_at": "2018-10-26 12:34:04",
+
+        "updated_at": "2018-10-26 12:57:42"
+
+    }
+
+}
+
+1. **Delete a category**
+
+Permission: Client
+
+Method Type: GET
+
+Route: /api/categories/delete/{id}
+
+Http Header parameters:
+
+Content-type: multipart/form-data
+
+Authorization: Bearer <AccessToken>
+
+Parameter:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| Id | Integer | The id of the category that you want to update |
+
+Response:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| status | String | The status outcome of the action. Possible outputs "success" or "error" |
+| Data | JSON array | null |
+
+Example usage:
+
+127.0.0.1:8000/api/categories/delete/1
+
+Example response:
+
+{
+
+    "status": "success",
+
+    "status_code": 200,
+
+    "message": "Deleted",
+
+    "data": null
+
+}
+
+1. **Get all articles**
+
+Permission: Any one
+
+Method Type: GET
+
+Route: /api/articles/all
+
+Http Header parameters: none
+
+Parameter:none
+
+Response:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| id | Integer | The id of the article |
+| title | String | The title of the article |
+| image | string | The name of the featured image |
+| author | String | The name of the article aiuthor |
+| website_name | String | The name of the website where the article was posted |
+| webUrl | String | The url of the website where the article was posted |
+| brief_description | String | An excerpt of the article |
+| category_id | integer | The id of the category of the article |
+| views | Integer | The number of times the article has been viewed |
+| created_at | DateTime | The timestamp of when the article was created |
+| updated_at | DateTime | The timestamp of when the article was updated |
+
+Example usage:
+
+127.0.0.1:8000/api/articles/all
+
+Example response:
+
+[
+
+    {
+
+        "id": 4,
+
+        "title": "Another Article",
+
+        "image": null,
+
+        "author": "Ann Doe",
+
+        "website_name": "Another Webistes",
+
+        "webUrl": "www.myurl.com",
+
+        "brief_description": "this is my brief description",
+
+        "category_id": 2,
+
+        "views": 0,
+
+        "created_at": "2018-10-26 09:37:23",
+
+        "updated_at": "2018-10-26 09:37:23"
+
+    },
+
+    {
+
+        "id": 5,
+
+        "title": "Another Article",
+
+        "image": null,
+
+        "author": "Ann Doe",
+
+        "website_name": "Another Webistes",
+
+        "webUrl": "www.myurl.com",
+
+        "brief_description": "this is my brief description",
+
+        "category_id": 2,
+
+        "views": 0,
+
+        "created_at": "2018-10-26 12:07:39",
+
+        "updated_at": "2018-10-26 12:07:39"
+
+    }
+
+]
+
+1. Get popular articles
+
+Permission: Any one
+
+Method Type: GET
+
+Route: /api/articles/popular
+
+Http Header parameters: none
+
+Parameter: none
+
+Response:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| id | Integer | The id of the article |
+| title | String | The title of the article |
+| image | string | The name of the featured image |
+| author | String | The name of the article author |
+| website_name | String | The name of the website where the article was posted |
+| webUrl | String | The url of the website where the article was posted |
+| brief_description | String | An excerpt of the article |
+| category_id | integer | The id of the category of the article |
+| views | Integer | The number of times the article has been viewed |
+| created_at | DateTime | The timestamp of when the article was created |
+| updated_at | DateTime | The timestamp of when the article was updated |
+
+Example usage:
+
+127.0.0.1:8000/api/articles/popular
+
+Example response:
+
+[
+
+    {
+
+        "id": 4,
+
+        "title": "Another Article",
+
+        "image": null,
+
+        "author": "Ann Doe",
+
+        "website_name": "Another Webistes",
+
+        "webUrl": "www.myurl.com",
+
+        "brief_description": "this is my brief description",
+
+        "category_id": 2,
+
+        "views": 0,
+
+        "created_at": "2018-10-26 09:37:23",
+
+        "updated_at": "2018-10-26 09:37:23"
+
+    },
+
+    {
+
+        "id": 5,
+
+        "title": "Another Article",
+
+        "image": null,
+
+        "author": "Ann Doe",
+
+        "website_name": "Another Webistes",
+
+        "webUrl": "www.myurl.com",
+
+        "brief_description": "this is my brief description",
+
+        "category_id": 2,
+
+        "views": 0,
+
+        "created_at": "2018-10-26 12:07:39",
+
+        "updated_at": "2018-10-26 12:07:39"
+
+    }
+
+]
+
+1. Get paginated articles
+
+Permission: Any one
+
+Method Type: GET
+
+Route: /api/articles/paginate
+
+Http Header parameters: none
+
+Parameter: none
+
+Response:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| current_page | Integer | The  page number of the output |
+| data | JSON Array | The data output of all the articles in the page |
+| id | Integer | The id of the article |
+| title | String | The title of the article |
+| image | string | The name of the featured image |
+| author | String | The name of the article author |
+| website_name | String | The name of the website where the article was posted |
+| webUrl | String | The url of the website where the article was posted |
+| brief_description | String | An excerpt of the article |
+| category_id | integer | The id of the category of the article |
+| views | Integer | The number of times the article has been viewed |
+| created_at | DateTime | The timestamp of when the article was created |
+| updated_at | DateTime | The timestamp of when the article was updated |
+| id |   |   |
+| first_page_url | String | The link to the first page of the output   |
+| from | Integer | The index of the first output |
+| last_page | Integer | The index of the last page of the out put |
+| last_page_url | String | The link to the last page of the output |
+| next_page_url | String | The link to the next page of the output |
+| path | String | The link to the homepage of the output |
+| per_page | Integer | The total number of articles displayed in a page |
+| prev_page_url | String | The link to the previous page of the output |
+| to | Integer | The last index of the output displayed in this page |
+| total | Integer | The total number of the items from the database |
+
+Example usage:
+
+127.0.0.1:8000/api/articles/paginate
+
+Example outcome:
+
+{
+
+    "current_page": 1,
+
+    "data": [
+
+        {
+
+            "id": 4,
+
+            "title": "Another Article",
+
+            "image": null,
+
+            "author": "Ann Doe",
+
+            "website_name": "Another Webistes",
+
+            "webUrl": "www.myurl.com",
+
+            "brief_description": "this is my brief description",
+
+            "category_id": 2,
+
+            "views": 0,
+
+            "created_at": "2018-10-26 09:37:23",
+
+            "updated_at": "2018-10-26 09:37:23"
+
+        },
+
+        {
+
+            "id": 5,
+
+            "title": "Another Article",
+
+            "image": null,
+
+            "author": "Ann Doe",
+
+            "website_name": "Another Webistes",
+
+            "webUrl": "www.myurl.com",
+
+            "brief_description": "this is my brief description",
+
+            "category_id": 2,
+
+            "views": 0,
+
+            "created_at": "2018-10-26 12:07:39",
+
+            "updated_at": "2018-10-26 12:07:39"
+
+        }
+
+    ],
+
+    "first_page_url": "http://127.0.0.1:8000/api/articles/paginate?page=1",
+
+    "from": 1,
+
+    "last_page": 1,
+
+    "last_page_url": "http://127.0.0.1:8000/api/articles/paginate?page=1",
+
+    "next_page_url": null,
+
+    "path": "http://127.0.0.1:8000/api/articles/paginate",
+
+    "per_page": 10,
+
+    "prev_page_url": null,
+
+    "to": 2,
+
+    "total": 2
+
+}
+
+1. **Read a single article**
+
+Permission: Any one
+
+Method Type: GET
+
+Route:  /api/articles/get/{id}
+
+Http Header parameters: none
+
+Parameters:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| id | Integer | The id of the article |
+
+Response:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| id | Integer | The id of the article |
+| title | String | The title of the article |
+| image | string | The name of the featured image |
+| author | String | The name of the article author |
+| website_name | String | The name of the website where the article was posted |
+| webUrl | String | The url of the website where the article was posted |
+| brief_description | String | An excerpt of the article |
+| category_id | integer | The id of the category of the article |
+| views | Integer | The number of times the article has been viewed |
+| created_at | DateTime | The timestamp of when the article was created |
+| updated_at | DateTime | The timestamp of when the article was updated |
+
+Example usage
+
+127.0.0.1:8000/api/articles/get/4
+
+Example response:
+
+{
+
+    "id": 4,
+
+    "title": "Another Article",
+
+    "image": null,
+
+    "author": "Ann Doe",
+
+    "website_name": "Another Webistes",
+
+    "webUrl": "www.myurl.com",
+
+    "brief_description": "this is my brief description",
+
+    "category_id": 2,
+
+    "views": 1,
+
+    "created_at": "2018-10-26 09:37:23",
+
+    "updated_at": "2018-10-26 14:25:50"
+
+}
+
+1. **Read the number of views an article has**
+
+Permission: Any one
+
+Method Type: GETs
+
+Route:  /api/articles/{id}/views
+
+Http Header parameters: none
+
+Parameters:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| id | Integer | The id of the article |
+
+Success response:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| status | String | The status of the action, Possible response, "success" or "rror" |
+| status_code | Integer | The status code of the response |
+| message | String | The response message |
+| data | Integer | The number of views found |
+
+Example usage:
+
+127.0.0.1:8000/api/articles/4/views
+
+Example response:
+
+{
+
+    "status": "success",
+
+    "status_code": 200,
+
+    "message": "Views found",
+
+    "data": 1
+
+}
+
+1. **Create an article**
+
+Permission: Client
+
+Method Type: POST
+
+Route:  /api/articles/create
+
+Http Header parameters:
+
+Content-type: multipart/form-data
+
+Authorization: Bearer <AccessToken>
+
+Parameter
+
+| Field | Type | Description |
+| --- | --- | --- |
+| title | String | The title of the article |
+| image | string | The name of the featured image |
+| author | String | The name of the article author |
+| website_name | String | The name of the website where the article was posted |
+| webUrl | String | The url of the website where the article was posted |
+| brief_description | String | An excerpt of the article |
+| category_id | integer | The id of the category of the article |
+
+Success response:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| status | String | The status response. |
+| status_code | integer | The status response code of the operation |
+| message | String | The response message of the operation |
+| data | JSON array | The data response of the newly created article |
+| id | Integer | The id of the article |
+| title | String | The title of the article |
+| image | string | The name of the featured image |
+| author | String | The name of the article author |
+| website_name | String | The name of the website where the article was posted |
+| webUrl | String | The url of the website where the article was posted |
+| brief_description | String | An excerpt of the article |
+| category_id | integer | The id of the category of the article |
+| views | Integer | The number of times the article has been viewed |
+| created_at | DateTime | The timestamp of when the article was created |
+| updated_at | DateTime | The timestamp of when the article was updated |
+|   |   |   |
+
+Example usage:
+
+127.0.0.1:8000/api/articles/create
+
+Example response:
+
+{
+
+    "status": "success",
+
+    "status_code": 201,
+
+    "message": "Article Created",
+
+    "data": {
+
+        "title": "The latest article",
+
+        "website_name": "East african post",
+
+        "webUrl": "www.myurl.com",
+
+        "brief_description": "this is my brief description",
+
+        "category_id": "2",
+
+        "author": "Sammy Doe",
+
+        "updated_at": "2018-10-26 14:54:45",
+
+        "created_at": "2018-10-26 14:54:45",
+
+        "id": 8
+
+    }
+
+}
+
+1. **Update an article**
+
+Permission: Client
+
+Method Type: POST
+
+Route:  /api/articles/update
+
+Http Header parameters:
+
+Content-type: multipart/form-data
+
+Authorization: Bearer <AccessToken>
+
+Parameter
+
+| Field | Type | Description |
+| --- | --- | --- |
+| title | String | The title of the article |
+| image | string | The name of the featured image |
+| author | String | The name of the article author |
+| website_name | String | The name of the website where the article was posted |
+| webUrl | String | The url of the website where the article was posted |
+| brief_description | String | An excerpt of the article |
+| category_id | integer | The id of the category of the article |
+| id | Integer | The id of the article to be updated |
+
+Success response:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| status | String | The status response. |
+| status_code | integer | The status response code of the operation |
+| message | String | The response message of the operation |
+| data | JSON array | The data response of the updated article |
+| id | Integer | The id of the article |
+| title | String | The title of the article |
+| image | string | The name of the featured image |
+| author | String | The name of the article author |
+| website_name | String | The name of the website where the article was posted |
+| webUrl | String | The url of the website where the article was posted |
+| brief_description | String | An excerpt of the article |
+| category_id | integer | The id of the category of the article |
+| views | Integer | The number of times the article has been viewed |
+| created_at | DateTime | The timestamp of when the article was created |
+| updated_at | DateTime | The timestamp of when the article was updated |
+|   |   |   |
+
+Example usage:
+
+127.0.0.1:8000/api/articles/update
+
+Example response:
+
+{
+
+    "status": "success",
+
+    "status_code": 201,
+
+    "message": "Saved successfully",
+
+    "data": {
+
+        "id": 4,
+
+        "title": "The updated article",
+
+        "image": null,
+
+        "author": "Sammy Doe",
+
+        "website_name": "East african post",
+
+        "webUrl": "www.myurl.com",
+
+        "brief_description": "this is my brief description",
+
+        "category_id": "2",
+
+        "views": 1,
+
+        "created_at": "2018-10-26 09:37:23",
+
+        "updated_at": "2018-10-26 15:11:53"
+
+    }
+
+}
+
+1. **Delete article**
+
+Permission: Client
+
+Method Type: GET
+
+Route:  /api/articles/delete/{id}
+
+Http Header parameters:
+
+Content-type: multipart/form-data
+
+Authorization: Bearer <AccessToken>
+
+Parameter:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| Id | Integer | The id of the article |
+|   |   |   |
+
+Response:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| status | String | The status of the response |
+| status_code | Integer | The status code of the task |
+| message | integer | The response message |
+
+Example usage:
+
+127.0.0.1:8000/api/articles/delete/1
+
+Example response:
+
+{
+
+    "status": "success",
+
+    "status_code": 200,
+
+    "message": "Deleted",
+
+    "data": null
+
+}
+
+1. **Login user/ get access token**
+
+Permission: any one
+
+Method Type: POST
+
+Route:  /api/login
+
+Http Header parameters: none
+
+Parameters:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| email | string | The email of the user |
+| password | String | The password of the user |
+
+Success:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| status | String | The status of the operation |
+| status_code | Integer | The status code of the operation performed |
+| message | String | The response message of the task performed |
+| data | JSON array | The response data after login |
+| token | String | The JWT authorization code generated after login. Used in http headers to authorize the client to update, delete and create |
+
+Example usage:
+
+127.0.0.1:8000/api/login
+
+Example response:
+
+{
+
+    "status": "success",
+
+    "status_code": 201,
+
+    "message": "success",
+
+    "data": {
+
+       "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MDU3MDg1OCwiZXhwIjoxNTQwNTc0NDU4LCJuYmYiOjE1NDA1NzA4NTgsImp0aSI6InA3Q2dVblhFUkh6VndRWEsiLCJzdWIiOjE0LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.XwsVdeIXIP186Cgt69Q_4b-8sq4jxN_P4jg9t2oeat8"
+
+    }
+
+}
+
+1. **Register user**
+
+Permission: any one
+
+Method Type: POST
+
+Route:  /api/login
+
+Http Header parameters: none
+
+Parameters:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| name | String | The name of the person who wants to register |
+| email | String | the email of the person who wants to register |
+| password | String | The password of the person who wants to register |
+|   |   |   |
