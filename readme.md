@@ -6,7 +6,7 @@ This api is used to help in development of an app that saves articles read from 
 
 Through out this documentation,
 
-- -- the terms "any one " refers to any person who has not logged  to the application and "Client" refers to a person who has not logged in to the application
+- -- the terms &quot;any one &quot; refers to any person who has not logged  to the application and &quot;Client&quot; refers to a person who has not logged in to the application
 - --Articles news articles  written in various websites
 - --Categories are the classifications of these articles
 
@@ -16,7 +16,7 @@ The client can categorize the articles
 
 Any one can READ my categories and articles
 
-1. **Read All Categories**
+**Read All Categories**
 
 Permission: Any one
 
@@ -32,11 +32,11 @@ Success:
 
 | Field | Type | Description |
 | --- | --- | --- |
-| Id    | Integer | The category id |
+| Id | Integer | The category id |
 | Title | String | The title of the category |
 | Views | Integer | The number of times the category has been read |
-| created__at | DateTime | The date and time when it was created |
-| updated__at | DateTime | The date and time when the category was updated |
+| created\_at | DateTime | The date and time when it was created |
+| updated\_at | DateTime | The date and time when the category was updated |
 
 Example usage:
 
@@ -45,24 +45,38 @@ Example usage:
 Example Response:
 
 [
+
     {
-        "id": 1,
-        "title": "Category 1",
-        "views": 1,
-        "created_at": "2018-10-26 08:03:31",
-        "updated_at": "2018-10-26 08:03:31"
+
+        &quot;id&quot;: 1,
+
+        &quot;title&quot;: &quot;Category 1&quot;,
+
+        &quot;views&quot;: 1,
+
+        &quot;created\_at&quot;: &quot;2018-10-26 08:03:31&quot;,
+
+        &quot;updated\_at&quot;: &quot;2018-10-26 08:03:31&quot;
+
     },
+
     {
-        "id": 2,
-        "title": "Category 2",
-        "views": 5,
-        "created_at": "2018-10-26 08:04:33",
-        "updated_at": "2018-10-26 08:04:33"
+
+        &quot;id&quot;: 2,
+
+        &quot;title&quot;: &quot;Category 2&quot;,
+
+        &quot;views&quot;: 5,
+
+        &quot;created\_at&quot;: &quot;2018-10-26 08:04:33&quot;,
+
+        &quot;updated\_at&quot;: &quot;2018-10-26 08:04:33&quot;
+
     }
+
 ]
 
-
-1. **Read one category**
+**Read one category**
 
 Permission: Any one
 
@@ -85,8 +99,8 @@ Success:
 | Id | Integer | The category id |
 | Title | String | The title of the category |
 | Views | Integer | The number of times the category has been read |
-| created_at | DateTime | The date and time when it was created |
-| updated_at | DateTime | The date and time when the category was updated |
+| created\_at | DateTime | The date and time when it was created |
+| updated\_at | DateTime | The date and time when the category was updated |
 
 Example usage:
 
@@ -96,19 +110,19 @@ Example Response:
 
 {
 
-    "id": 1,
+    &quot;id&quot;: 1,
 
-    "title": "Category 1",
+    &quot;title&quot;: &quot;Category 1&quot;,
 
-    "views": 3,
+    &quot;views&quot;: 3,
 
-    "created_at": "2018-10-26 08:03:31",
+    &quot;created\_at&quot;: &quot;2018-10-26 08:03:31&quot;,
 
-    "updated_at": "2018-10-26 10:42:49"
+    &quot;updated\_at&quot;: &quot;2018-10-26 10:42:49&quot;
 
 }
 
-1. **Read popular categories**
+**Read popular categories**
 
 Permission: Any one
 
@@ -127,8 +141,8 @@ Success:
 | Id | Integer | The category id |
 | Title | String | The title of the category |
 | Views | Integer | The number of times the category has been read |
-| created_at | DateTime | The date and time when it was created |
-| updated_at | DateTime | The date and time when the category was updated |
+| created\_at | DateTime | The date and time when it was created |
+| updated\_at | DateTime | The date and time when the category was updated |
 
 Example usage:
 
@@ -140,35 +154,35 @@ Example Response:
 
     {
 
-        "id": 1,
+        &quot;id&quot;: 1,
 
-        "title": "Category 1",
+        &quot;title&quot;: &quot;Category 1&quot;,
 
-        "views": 1,
+        &quot;views&quot;: 1,
 
-        "created_at": "2018-10-26 08:03:31",
+        &quot;created\_at&quot;: &quot;2018-10-26 08:03:31&quot;,
 
-        "updated_at": "2018-10-26 08:03:31"
+        &quot;updated\_at&quot;: &quot;2018-10-26 08:03:31&quot;
 
     },
 
     {
 
-        "id": 2,
+        &quot;id&quot;: 2,
 
-        "title": "Category 2",
+        &quot;title&quot;: &quot;Category 2&quot;,
 
-        "views": 5,
+        &quot;views&quot;: 5,
 
-        "created_at": "2018-10-26 08:04:33",
+        &quot;created\_at&quot;: &quot;2018-10-26 08:04:33&quot;,
 
-        "updated_at": "2018-10-26 08:04:33"
+        &quot;updated\_at&quot;: &quot;2018-10-26 08:04:33&quot;
 
     }
 
 ]
 
-1. **Get articles in a category**
+**Get articles in a category**
 
 Permission: Any one
 
@@ -193,13 +207,13 @@ Success:
 | Id | Integer | The id of the article |
 | Title | String | The title of the article |
 | Author | String | The name of the author of the article |
-| website_name | String | The name of the website where the article was posted  |
+| website\_name | String | The name of the website where the article was posted  |
 | webUrl | String | The url of the website where the article was posted |
-| brief_description | String | The excerpt of the article |
-| category_id | Integer | The id of the category of the article |
+| brief\_description | String | The excerpt of the article |
+| category\_id | Integer | The id of the category of the article |
 | views | Integer | The number of times that the article is viewed |
-| created_at | DateTime | The date and time when it was created |
-| updated_at | DateTime | The date and time when the article was updated |
+| created\_at | DateTime | The date and time when it was created |
+| updated\_at | DateTime | The date and time when the article was updated |
 |   |   |   |
 
 Example usage:
@@ -212,59 +226,59 @@ Example response:
 
     {
 
-        "id": 4,
+        &quot;id&quot;: 4,
 
-        "title": "Article 1",
+        &quot;title&quot;: &quot;Article 1&quot;,
 
-        "image": "www.myurl.com/images/image.jpg",
+        &quot;image&quot;: &quot;www.myurl.com/images/image.jpg&quot;,
 
-        "author": "Ann Doe",
+        &quot;author&quot;: &quot;Ann Doe&quot;,
 
-        "website_name": "Another Webistes",
+        &quot;website\_name&quot;: &quot;Another Webistes&quot;,
 
-        "webUrl": "www.myurl.com",
+        &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
 
-        "brief_description": "this is my brief description",
+        &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
 
-        "category_id": 2,
+        &quot;category\_id&quot;: 2,
 
-        "views": 0,
+        &quot;views&quot;: 0,
 
-        "created_at": "2018-10-26 09:37:23",
+        &quot;created\_at&quot;: &quot;2018-10-26 09:37:23&quot;,
 
-        "updated_at": "2018-10-26 09:37:23"
+        &quot;updated\_at&quot;: &quot;2018-10-26 09:37:23&quot;
 
     },
 
     {
 
-        "id": 5,
+        &quot;id&quot;: 5,
 
-        "title": "Another Article",
+        &quot;title&quot;: &quot;Another Article&quot;,
 
-        "image": null,
+        &quot;image&quot;: null,
 
-        "author": "Ann Doe",
+        &quot;author&quot;: &quot;Ann Doe&quot;,
 
-        "website_name": "Another Webistes",
+        &quot;website\_name&quot;: &quot;Another Webistes&quot;,
 
-        "webUrl": "www.myurl.com",
+        &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
 
-        "brief_description": "this is my brief description",
+        &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
 
-        "category_id": 2,
+        &quot;category\_id&quot;: 2,
 
-        "views": 0,
+        &quot;views&quot;: 0,
 
-        "created_at": "2018-10-26 12:07:39",
+        &quot;created\_at&quot;: &quot;2018-10-26 12:07:39&quot;,
 
-        "updated_at": "2018-10-26 12:07:39"
+        &quot;updated\_at&quot;: &quot;2018-10-26 12:07:39&quot;
 
     }
 
 ]
 
-1. **Create a new category**
+**Create a new category**
 
 Permission: Client
 
@@ -276,7 +290,7 @@ Http Header parameters:
 
 Content-type: multipart/form-data
 
-Authorization: Bearer <AccessToken>
+Authorization: Bearer \&lt;AccessToken\&gt;
 
 Parameter:
 
@@ -288,13 +302,13 @@ Success:
 
 | Field | Type | Description |
 | --- | --- | --- |
-| status | String | The status of the operation. Possible outcome: "success" or "error" |
-| status_code | Integer | The code of the status of the operation |
+| status | String | The status of the operation. Possible outcome: &quot;success&quot; or &quot;error&quot; |
+| status\_code | Integer | The code of the status of the operation |
 | message | String | The message response regarding the operation |
 | data | JSON array | The output data. Shows the properties of the new created category |
 | title | String | The title of the new created category |
-| updated_at | Datetime | The timestamp of when the category was updated |
-| created_at | Datetime | The timestamp of when the category was updated |
+| updated\_at | Datetime | The timestamp of when the category was updated |
+| created\_at | Datetime | The timestamp of when the category was updated |
 | id | Integer | The id of the new created category |
 
 
@@ -307,27 +321,27 @@ Example response:
 
 {
 
-    "status": "success",
+    &quot;status&quot;: &quot;success&quot;,
 
-    "status_code": 201,
+    &quot;status\_code&quot;: 201,
 
-    "message": "Category Created",
+    &quot;message&quot;: &quot;Category Created&quot;,
 
-    "data": {
+    &quot;data&quot;: {
 
-        "title": "Another Article",
+        &quot;title&quot;: &quot;Another Article&quot;,
 
-        "updated_at": "2018-10-26 12:34:04",
+        &quot;updated\_at&quot;: &quot;2018-10-26 12:34:04&quot;,
 
-        "created_at": "2018-10-26 12:34:04",
+        &quot;created\_at&quot;: &quot;2018-10-26 12:34:04&quot;,
 
-        "id": 3
+        &quot;id&quot;: 3
 
     }
 
 }
 
-1. **Update category**
+**Update category**
 
 Permission: Client
 
@@ -339,7 +353,7 @@ Http Header parameters:
 
 Content-type: multipart/form-data
 
-Authorization: Bearer <AccessToken>
+Authorization: Bearer \&lt;AccessToken\&gt;
 
 Parameter:
 
@@ -353,13 +367,13 @@ Success:
 
 | Field | Type | Description |
 | --- | --- | --- |
-| status | String | The status of the operation. Possible outcome: "success" or "error" |
-| status_code | Integer | The code of the status of the action |
+| status | String | The status of the operation. Possible outcome: &quot;success&quot; or &quot;error&quot; |
+| status\_code | Integer | The code of the status of the action |
 | message | String | The message response regarding the action |
 | data | JSON array | The output data. Shows the properties of the updated category |
 | title | String | The title of the updated category |
-| updated_at | Datetime | The timestamp of when the category was updated |
-| created_at | Datetime | The timestamp of when the category was updated |
+| updated\_at | Datetime | The timestamp of when the category was updated |
+| created\_at | Datetime | The timestamp of when the category was updated |
 | id | Integer | The id of the updated category |
 
 Example usage:
@@ -370,29 +384,29 @@ Example response:
 
 {
 
-    "status": "success",
+    &quot;status&quot;: &quot;success&quot;,
 
-    "status_code": 201,
+    &quot;status\_code&quot;: 201,
 
-    "message": "Saved successfully",
+    &quot;message&quot;: &quot;Saved successfully&quot;,
 
-    "data": {
+    &quot;data&quot;: {
 
-        "id": 3,
+        &quot;id&quot;: 3,
 
-        "title": "Updated  Category",
+        &quot;title&quot;: &quot;Updated  Category&quot;,
 
-        "views": 0,
+        &quot;views&quot;: 0,
 
-        "created_at": "2018-10-26 12:34:04",
+        &quot;created\_at&quot;: &quot;2018-10-26 12:34:04&quot;,
 
-        "updated_at": "2018-10-26 12:57:42"
+        &quot;updated\_at&quot;: &quot;2018-10-26 12:57:42&quot;
 
     }
 
 }
 
-1. **Delete a category**
+**Delete a category**
 
 Permission: Client
 
@@ -404,7 +418,7 @@ Http Header parameters:
 
 Content-type: multipart/form-data
 
-Authorization: Bearer <AccessToken>
+Authorization: Bearer \&lt;AccessToken\&gt;
 
 Parameter:
 
@@ -416,7 +430,7 @@ Response:
 
 | Field | Type | Description |
 | --- | --- | --- |
-| status | String | The status outcome of the action. Possible outputs "success" or "error" |
+| status | String | The status outcome of the action. Possible outputs &quot;success&quot; or &quot;error&quot; |
 | Data | JSON array | null |
 
 Example usage:
@@ -427,17 +441,17 @@ Example response:
 
 {
 
-    "status": "success",
+    &quot;status&quot;: &quot;success&quot;,
 
-    "status_code": 200,
+    &quot;status\_code&quot;: 200,
 
-    "message": "Deleted",
+    &quot;message&quot;: &quot;Deleted&quot;,
 
-    "data": null
+    &quot;data&quot;: null
 
 }
 
-1. **Get all articles**
+**Get all articles**
 
 Permission: Any one
 
@@ -457,13 +471,13 @@ Response:
 | title | String | The title of the article |
 | image | string | The name of the featured image |
 | author | String | The name of the article aiuthor |
-| website_name | String | The name of the website where the article was posted |
+| website\_name | String | The name of the website where the article was posted |
 | webUrl | String | The url of the website where the article was posted |
-| brief_description | String | An excerpt of the article |
-| category_id | integer | The id of the category of the article |
+| brief\_description | String | An excerpt of the article |
+| category\_id | integer | The id of the category of the article |
 | views | Integer | The number of times the article has been viewed |
-| created_at | DateTime | The timestamp of when the article was created |
-| updated_at | DateTime | The timestamp of when the article was updated |
+| created\_at | DateTime | The timestamp of when the article was created |
+| updated\_at | DateTime | The timestamp of when the article was updated |
 
 Example usage:
 
@@ -475,59 +489,59 @@ Example response:
 
     {
 
-        "id": 4,
+        &quot;id&quot;: 4,
 
-        "title": "Another Article",
+        &quot;title&quot;: &quot;Another Article&quot;,
 
-        "image": null,
+        &quot;image&quot;: null,
 
-        "author": "Ann Doe",
+        &quot;author&quot;: &quot;Ann Doe&quot;,
 
-        "website_name": "Another Webistes",
+        &quot;website\_name&quot;: &quot;Another Webistes&quot;,
 
-        "webUrl": "www.myurl.com",
+        &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
 
-        "brief_description": "this is my brief description",
+        &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
 
-        "category_id": 2,
+        &quot;category\_id&quot;: 2,
 
-        "views": 0,
+        &quot;views&quot;: 0,
 
-        "created_at": "2018-10-26 09:37:23",
+        &quot;created\_at&quot;: &quot;2018-10-26 09:37:23&quot;,
 
-        "updated_at": "2018-10-26 09:37:23"
+        &quot;updated\_at&quot;: &quot;2018-10-26 09:37:23&quot;
 
     },
 
     {
 
-        "id": 5,
+        &quot;id&quot;: 5,
 
-        "title": "Another Article",
+        &quot;title&quot;: &quot;Another Article&quot;,
 
-        "image": null,
+        &quot;image&quot;: null,
 
-        "author": "Ann Doe",
+        &quot;author&quot;: &quot;Ann Doe&quot;,
 
-        "website_name": "Another Webistes",
+        &quot;website\_name&quot;: &quot;Another Webistes&quot;,
 
-        "webUrl": "www.myurl.com",
+        &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
 
-        "brief_description": "this is my brief description",
+        &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
 
-        "category_id": 2,
+        &quot;category\_id&quot;: 2,
 
-        "views": 0,
+        &quot;views&quot;: 0,
 
-        "created_at": "2018-10-26 12:07:39",
+        &quot;created\_at&quot;: &quot;2018-10-26 12:07:39&quot;,
 
-        "updated_at": "2018-10-26 12:07:39"
+        &quot;updated\_at&quot;: &quot;2018-10-26 12:07:39&quot;
 
     }
 
 ]
 
-1. Get popular articles
+**Get popular articles**
 
 Permission: Any one
 
@@ -547,13 +561,13 @@ Response:
 | title | String | The title of the article |
 | image | string | The name of the featured image |
 | author | String | The name of the article author |
-| website_name | String | The name of the website where the article was posted |
+| website\_name | String | The name of the website where the article was posted |
 | webUrl | String | The url of the website where the article was posted |
-| brief_description | String | An excerpt of the article |
-| category_id | integer | The id of the category of the article |
+| brief\_description | String | An excerpt of the article |
+| category\_id | integer | The id of the category of the article |
 | views | Integer | The number of times the article has been viewed |
-| created_at | DateTime | The timestamp of when the article was created |
-| updated_at | DateTime | The timestamp of when the article was updated |
+| created\_at | DateTime | The timestamp of when the article was created |
+| updated\_at | DateTime | The timestamp of when the article was updated |
 
 Example usage:
 
@@ -565,59 +579,59 @@ Example response:
 
     {
 
-        "id": 4,
+        &quot;id&quot;: 4,
 
-        "title": "Another Article",
+        &quot;title&quot;: &quot;Another Article&quot;,
 
-        "image": null,
+        &quot;image&quot;: null,
 
-        "author": "Ann Doe",
+        &quot;author&quot;: &quot;Ann Doe&quot;,
 
-        "website_name": "Another Webistes",
+        &quot;website\_name&quot;: &quot;Another Webistes&quot;,
 
-        "webUrl": "www.myurl.com",
+        &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
 
-        "brief_description": "this is my brief description",
+        &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
 
-        "category_id": 2,
+        &quot;category\_id&quot;: 2,
 
-        "views": 0,
+        &quot;views&quot;: 0,
 
-        "created_at": "2018-10-26 09:37:23",
+        &quot;created\_at&quot;: &quot;2018-10-26 09:37:23&quot;,
 
-        "updated_at": "2018-10-26 09:37:23"
+        &quot;updated\_at&quot;: &quot;2018-10-26 09:37:23&quot;
 
     },
 
     {
 
-        "id": 5,
+        &quot;id&quot;: 5,
 
-        "title": "Another Article",
+        &quot;title&quot;: &quot;Another Article&quot;,
 
-        "image": null,
+        &quot;image&quot;: null,
 
-        "author": "Ann Doe",
+        &quot;author&quot;: &quot;Ann Doe&quot;,
 
-        "website_name": "Another Webistes",
+        &quot;website\_name&quot;: &quot;Another Webistes&quot;,
 
-        "webUrl": "www.myurl.com",
+        &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
 
-        "brief_description": "this is my brief description",
+        &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
 
-        "category_id": 2,
+        &quot;category\_id&quot;: 2,
 
-        "views": 0,
+        &quot;views&quot;: 0,
 
-        "created_at": "2018-10-26 12:07:39",
+        &quot;created\_at&quot;: &quot;2018-10-26 12:07:39&quot;,
 
-        "updated_at": "2018-10-26 12:07:39"
+        &quot;updated\_at&quot;: &quot;2018-10-26 12:07:39&quot;
 
     }
 
 ]
 
-1. Get paginated articles
+**Get paginated articles**
 
 Permission: Any one
 
@@ -633,28 +647,28 @@ Response:
 
 | Field | Type | Description |
 | --- | --- | --- |
-| current_page | Integer | The  page number of the output |
+| current\_page | Integer | The  page number of the output |
 | data | JSON Array | The data output of all the articles in the page |
 | id | Integer | The id of the article |
 | title | String | The title of the article |
 | image | string | The name of the featured image |
 | author | String | The name of the article author |
-| website_name | String | The name of the website where the article was posted |
+| website\_name | String | The name of the website where the article was posted |
 | webUrl | String | The url of the website where the article was posted |
-| brief_description | String | An excerpt of the article |
-| category_id | integer | The id of the category of the article |
+| brief\_description | String | An excerpt of the article |
+| category\_id | integer | The id of the category of the article |
 | views | Integer | The number of times the article has been viewed |
-| created_at | DateTime | The timestamp of when the article was created |
-| updated_at | DateTime | The timestamp of when the article was updated |
+| created\_at | DateTime | The timestamp of when the article was created |
+| updated\_at | DateTime | The timestamp of when the article was updated |
 | id |   |   |
-| first_page_url | String | The link to the first page of the output   |
+| first\_page\_url | String | The link to the first page of the output   |
 | from | Integer | The index of the first output |
-| last_page | Integer | The index of the last page of the out put |
-| last_page_url | String | The link to the last page of the output |
-| next_page_url | String | The link to the next page of the output |
+| last\_page | Integer | The index of the last page of the out put |
+| last\_page\_url | String | The link to the last page of the output |
+| next\_page\_url | String | The link to the next page of the output |
 | path | String | The link to the homepage of the output |
-| per_page | Integer | The total number of articles displayed in a page |
-| prev_page_url | String | The link to the previous page of the output |
+| per\_page | Integer | The total number of articles displayed in a page |
+| prev\_page\_url | String | The link to the previous page of the output |
 | to | Integer | The last index of the output displayed in this page |
 | total | Integer | The total number of the items from the database |
 
@@ -666,87 +680,87 @@ Example outcome:
 
 {
 
-    "current_page": 1,
+    &quot;current\_page&quot;: 1,
 
-    "data": [
+    &quot;data&quot;: [
 
         {
 
-            "id": 4,
+            &quot;id&quot;: 4,
 
-            "title": "Another Article",
+            &quot;title&quot;: &quot;Another Article&quot;,
 
-            "image": null,
+            &quot;image&quot;: null,
 
-            "author": "Ann Doe",
+            &quot;author&quot;: &quot;Ann Doe&quot;,
 
-            "website_name": "Another Webistes",
+            &quot;website\_name&quot;: &quot;Another Webistes&quot;,
 
-            "webUrl": "www.myurl.com",
+            &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
 
-            "brief_description": "this is my brief description",
+            &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
 
-            "category_id": 2,
+            &quot;category\_id&quot;: 2,
 
-            "views": 0,
+            &quot;views&quot;: 0,
 
-            "created_at": "2018-10-26 09:37:23",
+            &quot;created\_at&quot;: &quot;2018-10-26 09:37:23&quot;,
 
-            "updated_at": "2018-10-26 09:37:23"
+            &quot;updated\_at&quot;: &quot;2018-10-26 09:37:23&quot;
 
         },
 
         {
 
-            "id": 5,
+            &quot;id&quot;: 5,
 
-            "title": "Another Article",
+            &quot;title&quot;: &quot;Another Article&quot;,
 
-            "image": null,
+            &quot;image&quot;: null,
 
-            "author": "Ann Doe",
+            &quot;author&quot;: &quot;Ann Doe&quot;,
 
-            "website_name": "Another Webistes",
+            &quot;website\_name&quot;: &quot;Another Webistes&quot;,
 
-            "webUrl": "www.myurl.com",
+            &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
 
-            "brief_description": "this is my brief description",
+            &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
 
-            "category_id": 2,
+            &quot;category\_id&quot;: 2,
 
-            "views": 0,
+            &quot;views&quot;: 0,
 
-            "created_at": "2018-10-26 12:07:39",
+            &quot;created\_at&quot;: &quot;2018-10-26 12:07:39&quot;,
 
-            "updated_at": "2018-10-26 12:07:39"
+            &quot;updated\_at&quot;: &quot;2018-10-26 12:07:39&quot;
 
         }
 
     ],
 
-    "first_page_url": "http://127.0.0.1:8000/api/articles/paginate?page=1",
+    &quot;first\_page\_url&quot;: &quot;http://127.0.0.1:8000/api/articles/paginate?page=1&quot;,
 
-    "from": 1,
+    &quot;from&quot;: 1,
 
-    "last_page": 1,
+    &quot;last\_page&quot;: 1,
 
-    "last_page_url": "http://127.0.0.1:8000/api/articles/paginate?page=1",
+    &quot;last\_page\_url&quot;: &quot;http://127.0.0.1:8000/api/articles/paginate?page=1&quot;,
 
-    "next_page_url": null,
+    &quot;next\_page\_url&quot;: null,
 
-    "path": "http://127.0.0.1:8000/api/articles/paginate",
+    &quot;path&quot;: &quot;http://127.0.0.1:8000/api/articles/paginate&quot;,
 
-    "per_page": 10,
+    &quot;per\_page&quot;: 10,
 
-    "prev_page_url": null,
+    &quot;prev\_page\_url&quot;: null,
 
-    "to": 2,
+    &quot;to&quot;: 2,
 
-    "total": 2
+    &quot;total&quot;: 2
 
 }
 
-1. **Read a single article**
+**Read a single article**
 
 Permission: Any one
 
@@ -770,13 +784,13 @@ Response:
 | title | String | The title of the article |
 | image | string | The name of the featured image |
 | author | String | The name of the article author |
-| website_name | String | The name of the website where the article was posted |
+| website\_name | String | The name of the website where the article was posted |
 | webUrl | String | The url of the website where the article was posted |
-| brief_description | String | An excerpt of the article |
-| category_id | integer | The id of the category of the article |
+| brief\_description | String | An excerpt of the article |
+| category\_id | integer | The id of the category of the article |
 | views | Integer | The number of times the article has been viewed |
-| created_at | DateTime | The timestamp of when the article was created |
-| updated_at | DateTime | The timestamp of when the article was updated |
+| created\_at | DateTime | The timestamp of when the article was created |
+| updated\_at | DateTime | The timestamp of when the article was updated |
 
 Example usage
 
@@ -786,31 +800,31 @@ Example response:
 
 {
 
-    "id": 4,
+    &quot;id&quot;: 4,
 
-    "title": "Another Article",
+    &quot;title&quot;: &quot;Another Article&quot;,
 
-    "image": null,
+    &quot;image&quot;: null,
 
-    "author": "Ann Doe",
+    &quot;author&quot;: &quot;Ann Doe&quot;,
 
-    "website_name": "Another Webistes",
+    &quot;website\_name&quot;: &quot;Another Webistes&quot;,
 
-    "webUrl": "www.myurl.com",
+    &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
 
-    "brief_description": "this is my brief description",
+    &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
 
-    "category_id": 2,
+    &quot;category\_id&quot;: 2,
 
-    "views": 1,
+    &quot;views&quot;: 1,
 
-    "created_at": "2018-10-26 09:37:23",
+    &quot;created\_at&quot;: &quot;2018-10-26 09:37:23&quot;,
 
-    "updated_at": "2018-10-26 14:25:50"
+    &quot;updated\_at&quot;: &quot;2018-10-26 14:25:50&quot;
 
 }
 
-1. **Read the number of views an article has**
+**Read the number of views an article has**
 
 Permission: Any one
 
@@ -830,8 +844,8 @@ Success response:
 
 | Field | Type | Description |
 | --- | --- | --- |
-| status | String | The status of the action, Possible response, "success" or "rror" |
-| status_code | Integer | The status code of the response |
+| status | String | The status of the action, Possible response, &quot;success&quot; or &quot;rror&quot; |
+| status\_code | Integer | The status code of the response |
 | message | String | The response message |
 | data | Integer | The number of views found |
 
@@ -843,17 +857,17 @@ Example response:
 
 {
 
-    "status": "success",
+    &quot;status&quot;: &quot;success&quot;,
 
-    "status_code": 200,
+    &quot;status\_code&quot;: 200,
 
-    "message": "Views found",
+    &quot;message&quot;: &quot;Views found&quot;,
 
-    "data": 1
+    &quot;data&quot;: 1
 
 }
 
-1. **Create an article**
+**Create an article**
 
 Permission: Client
 
@@ -865,7 +879,7 @@ Http Header parameters:
 
 Content-type: multipart/form-data
 
-Authorization: Bearer <AccessToken>
+Authorization: Bearer \&lt;AccessToken\&gt;
 
 Parameter
 
@@ -874,30 +888,30 @@ Parameter
 | title | String | The title of the article |
 | image | string | The name of the featured image |
 | author | String | The name of the article author |
-| website_name | String | The name of the website where the article was posted |
+| website\_name | String | The name of the website where the article was posted |
 | webUrl | String | The url of the website where the article was posted |
-| brief_description | String | An excerpt of the article |
-| category_id | integer | The id of the category of the article |
+| brief\_description | String | An excerpt of the article |
+| category\_id | integer | The id of the category of the article |
 
 Success response:
 
 | Field | Type | Description |
 | --- | --- | --- |
 | status | String | The status response. |
-| status_code | integer | The status response code of the operation |
+| status\_code | integer | The status response code of the operation |
 | message | String | The response message of the operation |
 | data | JSON array | The data response of the newly created article |
 | id | Integer | The id of the article |
 | title | String | The title of the article |
 | image | string | The name of the featured image |
 | author | String | The name of the article author |
-| website_name | String | The name of the website where the article was posted |
+| website\_name | String | The name of the website where the article was posted |
 | webUrl | String | The url of the website where the article was posted |
-| brief_description | String | An excerpt of the article |
-| category_id | integer | The id of the category of the article |
+| brief\_description | String | An excerpt of the article |
+| category\_id | integer | The id of the category of the article |
 | views | Integer | The number of times the article has been viewed |
-| created_at | DateTime | The timestamp of when the article was created |
-| updated_at | DateTime | The timestamp of when the article was updated |
+| created\_at | DateTime | The timestamp of when the article was created |
+| updated\_at | DateTime | The timestamp of when the article was updated |
 |   |   |   |
 
 Example usage:
@@ -908,37 +922,37 @@ Example response:
 
 {
 
-    "status": "success",
+    &quot;status&quot;: &quot;success&quot;,
 
-    "status_code": 201,
+    &quot;status\_code&quot;: 201,
 
-    "message": "Article Created",
+    &quot;message&quot;: &quot;Article Created&quot;,
 
-    "data": {
+    &quot;data&quot;: {
 
-        "title": "The latest article",
+        &quot;title&quot;: &quot;The latest article&quot;,
 
-        "website_name": "East african post",
+        &quot;website\_name&quot;: &quot;East african post&quot;,
 
-        "webUrl": "www.myurl.com",
+        &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
 
-        "brief_description": "this is my brief description",
+        &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
 
-        "category_id": "2",
+        &quot;category\_id&quot;: &quot;2&quot;,
 
-        "author": "Sammy Doe",
+        &quot;author&quot;: &quot;Sammy Doe&quot;,
 
-        "updated_at": "2018-10-26 14:54:45",
+        &quot;updated\_at&quot;: &quot;2018-10-26 14:54:45&quot;,
 
-        "created_at": "2018-10-26 14:54:45",
+        &quot;created\_at&quot;: &quot;2018-10-26 14:54:45&quot;,
 
-        "id": 8
+        &quot;id&quot;: 8
 
     }
 
 }
 
-1. **Update an article**
+**Update an article**
 
 Permission: Client
 
@@ -950,7 +964,7 @@ Http Header parameters:
 
 Content-type: multipart/form-data
 
-Authorization: Bearer <AccessToken>
+Authorization: Bearer \&lt;AccessToken\&gt;
 
 Parameter
 
@@ -959,10 +973,10 @@ Parameter
 | title | String | The title of the article |
 | image | string | The name of the featured image |
 | author | String | The name of the article author |
-| website_name | String | The name of the website where the article was posted |
+| website\_name | String | The name of the website where the article was posted |
 | webUrl | String | The url of the website where the article was posted |
-| brief_description | String | An excerpt of the article |
-| category_id | integer | The id of the category of the article |
+| brief\_description | String | An excerpt of the article |
+| category\_id | integer | The id of the category of the article |
 | id | Integer | The id of the article to be updated |
 
 Success response:
@@ -970,20 +984,20 @@ Success response:
 | Field | Type | Description |
 | --- | --- | --- |
 | status | String | The status response. |
-| status_code | integer | The status response code of the operation |
+| status\_code | integer | The status response code of the operation |
 | message | String | The response message of the operation |
 | data | JSON array | The data response of the updated article |
 | id | Integer | The id of the article |
 | title | String | The title of the article |
 | image | string | The name of the featured image |
 | author | String | The name of the article author |
-| website_name | String | The name of the website where the article was posted |
+| website\_name | String | The name of the website where the article was posted |
 | webUrl | String | The url of the website where the article was posted |
-| brief_description | String | An excerpt of the article |
-| category_id | integer | The id of the category of the article |
+| brief\_description | String | An excerpt of the article |
+| category\_id | integer | The id of the category of the article |
 | views | Integer | The number of times the article has been viewed |
-| created_at | DateTime | The timestamp of when the article was created |
-| updated_at | DateTime | The timestamp of when the article was updated |
+| created\_at | DateTime | The timestamp of when the article was created |
+| updated\_at | DateTime | The timestamp of when the article was updated |
 |   |   |   |
 
 Example usage:
@@ -994,41 +1008,41 @@ Example response:
 
 {
 
-    "status": "success",
+    &quot;status&quot;: &quot;success&quot;,
 
-    "status_code": 201,
+    &quot;status\_code&quot;: 201,
 
-    "message": "Saved successfully",
+    &quot;message&quot;: &quot;Saved successfully&quot;,
 
-    "data": {
+    &quot;data&quot;: {
 
-        "id": 4,
+        &quot;id&quot;: 4,
 
-        "title": "The updated article",
+        &quot;title&quot;: &quot;The updated article&quot;,
 
-        "image": null,
+        &quot;image&quot;: null,
 
-        "author": "Sammy Doe",
+        &quot;author&quot;: &quot;Sammy Doe&quot;,
 
-        "website_name": "East african post",
+        &quot;website\_name&quot;: &quot;East african post&quot;,
 
-        "webUrl": "www.myurl.com",
+        &quot;webUrl&quot;: &quot;www.myurl.com&quot;,
 
-        "brief_description": "this is my brief description",
+        &quot;brief\_description&quot;: &quot;this is my brief description&quot;,
 
-        "category_id": "2",
+        &quot;category\_id&quot;: &quot;2&quot;,
 
-        "views": 1,
+        &quot;views&quot;: 1,
 
-        "created_at": "2018-10-26 09:37:23",
+        &quot;created\_at&quot;: &quot;2018-10-26 09:37:23&quot;,
 
-        "updated_at": "2018-10-26 15:11:53"
+        &quot;updated\_at&quot;: &quot;2018-10-26 15:11:53&quot;
 
     }
 
 }
 
-1. **Delete article**
+**Delete article**
 
 Permission: Client
 
@@ -1040,7 +1054,7 @@ Http Header parameters:
 
 Content-type: multipart/form-data
 
-Authorization: Bearer <AccessToken>
+Authorization: Bearer \&lt;AccessToken\&gt;
 
 Parameter:
 
@@ -1054,7 +1068,7 @@ Response:
 | Field | Type | Description |
 | --- | --- | --- |
 | status | String | The status of the response |
-| status_code | Integer | The status code of the task |
+| status\_code | Integer | The status code of the task |
 | message | integer | The response message |
 
 Example usage:
@@ -1065,17 +1079,17 @@ Example response:
 
 {
 
-    "status": "success",
+    &quot;status&quot;: &quot;success&quot;,
 
-    "status_code": 200,
+    &quot;status\_code&quot;: 200,
 
-    "message": "Deleted",
+    &quot;message&quot;: &quot;Deleted&quot;,
 
-    "data": null
+    &quot;data&quot;: null
 
 }
 
-1. **Login user/ get access token**
+**Login user/ get access token**
 
 Permission: any one
 
@@ -1097,7 +1111,7 @@ Success:
 | Field | Type | Description |
 | --- | --- | --- |
 | status | String | The status of the operation |
-| status_code | Integer | The status code of the operation performed |
+| status\_code | Integer | The status code of the operation performed |
 | message | String | The response message of the task performed |
 | data | JSON array | The response data after login |
 | token | String | The JWT authorization code generated after login. Used in http headers to authorize the client to update, delete and create |
@@ -1110,21 +1124,21 @@ Example response:
 
 {
 
-    "status": "success",
+    &quot;status&quot;: &quot;success&quot;,
 
-    "status_code": 201,
+    &quot;status\_code&quot;: 201,
 
-    "message": "success",
+    &quot;message&quot;: &quot;success&quot;,
 
-    "data": {
+    &quot;data&quot;: {
 
-       "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MDU3MDg1OCwiZXhwIjoxNTQwNTc0NDU4LCJuYmYiOjE1NDA1NzA4NTgsImp0aSI6InA3Q2dVblhFUkh6VndRWEsiLCJzdWIiOjE0LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.XwsVdeIXIP186Cgt69Q_4b-8sq4jxN_P4jg9t2oeat8"
+       &quot;token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MDU3MDg1OCwiZXhwIjoxNTQwNTc0NDU4LCJuYmYiOjE1NDA1NzA4NTgsImp0aSI6InA3Q2dVblhFUkh6VndRWEsiLCJzdWIiOjE0LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.XwsVdeIXIP186Cgt69Q\_4b-8sq4jxN\_P4jg9t2oeat8&quot;
 
     }
 
 }
 
-1. **Register user**
+**Register user**
 
 Permission: any one
 
